@@ -18,6 +18,15 @@ users.transaction do |t|
 end
 ```
 
+You can also use `Repository#transaction` in the same fashion.
+
+It is also equivalent to use the connection gateway:
+``` ruby
+rom_container.gateways[:default].transaction do |t|
+  # Your transaction...
+end
+```
+
 ## Learn more
 
 * [api::rom-sql::SQL/Relation](#transaction)
